@@ -102,9 +102,9 @@ const Home = () => {
         </p>
       </section>
 
-      <section className="instagram-shop">
-        <h3>Shop Instagram</h3>
+      <h3 className="shop__heading">Shop Instagram</h3>
 
+      <section className="instagram-shop">
         <div className="shop__image-container">
           {instagramImagesData.map((image) => (
             <div
