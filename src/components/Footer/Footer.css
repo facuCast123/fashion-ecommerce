@@ -1,0 +1,71 @@
+.footer {
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+
+  padding: 5rem 2rem;
+
+  background-color: #f5f4f4;
+  border-top: 1px solid gray;
+}
+
+.footer__links {
+  display: flex;
+  gap: 2rem;
+
+  margin-right: auto;
+}
+
+.link__heading {
+  opacity: 50%;
+  margin-bottom: 20px;
+}
+
+.customers > p:hover,
+.company > p:hover {
+  background-color: rgba(0, 0, 0, 0.187);
+  cursor: pointer;
+}
+
+.footer__newsletter {
+  display: flex;
+  flex-direction: column;
+
+  h4 {
+    font-size: 1.125rem;
+    font-weight: 500;
+
+    margin-bottom: 20px;
+  }
+}
+
+.newsletter__input {
+  padding: 1rem;
+}
+
+.newsletter__tos {
+  margin-bottom: 20px;
+}
+
+.newsletter__button {
+  width: fit-content;
+
+  padding: 0.5rem 1rem;
+
+  font-size: 1.125rem;
+  color: white;
+
+  background-color: black;
+  border: 1px solid transparent;
+
+  cursor: pointer;
+}
+
+.footer__tm {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+
+  opacity: 60%;
+}

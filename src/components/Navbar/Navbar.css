@@ -1,0 +1,40 @@
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  padding: 1rem 2rem;
+
+  background-color: white;
+  z-index: 999;
+}
+
+.nav__logo {
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+
+  margin-right: auto;
+
+  li > a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  span {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}

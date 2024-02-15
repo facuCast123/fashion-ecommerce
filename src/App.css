@@ -1,0 +1,198 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+button {
+  line-height: 1.1;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* HERO */
+
+.hero {
+  position: relative;
+
+  height: 100vh;
+
+  background: no-repeat url("../images/hero-image.png");
+  background-size: cover;
+
+  margin-bottom: 50px;
+}
+
+.hero__heading {
+  position: absolute;
+  left: 5%;
+  bottom: 15%;
+
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+}
+
+.hero__button {
+  position: absolute;
+  left: 5%;
+  bottom: 5%;
+
+  padding: 0.5rem 1rem;
+
+  font-weight: 600;
+
+  background: white;
+  border: 1px solid transparent;
+
+  cursor: pointer;
+}
+
+/* COLLECTION */
+
+.collection {
+  padding: 0 2rem;
+  margin-bottom: 50px;
+
+  p {
+    padding-left: 1rem;
+    margin-bottom: 50px;
+
+    font-size: 1.125rem;
+  }
+}
+
+.collection__image-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+/* PRODUCTS */
+
+.products {
+  padding: 0 2rem;
+  margin-bottom: 50px;
+
+  h2 {
+    padding-left: 1rem;
+    margin-bottom: 50px;
+
+    font-size: 1.125rem;
+    font-weight: 500;
+  }
+}
+
+.products__container {
+  display: flex;
+  gap: 1rem;
+
+  margin-bottom: 50px;
+}
+
+.products__image-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+/* CHOICES */
+
+.choices {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  padding: 5rem;
+  padding-bottom: 10rem;
+  margin-bottom: 50px;
+
+  text-align: center;
+
+  background-color: #f5f4f4;
+}
+
+.choices__heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.choices__text {
+  width: 60%;
+}
+
+/* INSTAGRAM SHOP */
+
+.instagram-shop {
+  padding: 0 2rem;
+  margin-bottom: 50px;
+
+  h3 {
+    margin: 0 auto 50px;
+    text-align: center;
+  }
+}
+
+.shop__image-container {
+  width: fit-content;
+
+  display: flex;
+  gap: 1rem;
+
+  margin: 0 auto;
+}
+
+.image-container {
+  position: relative;
+}
+
+.instagram-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+
+  font-size: 2rem;
+  color: white;
+}
+
+.image-container.hovered > img {
+  filter: brightness(50%);
+  cursor: pointer;
+}
+
+.image-container.hovered > .instagram-logo {
+  opacity: 1;
+}
