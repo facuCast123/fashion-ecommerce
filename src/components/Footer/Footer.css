@@ -46,6 +46,10 @@
 
 .newsletter__tos {
   margin-bottom: 20px;
+
+  a {
+    color: black;
+  }
 }
 
 .newsletter__button {
@@ -68,4 +72,22 @@
   left: 20px;
 
   opacity: 60%;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 900px) {
+  .footer {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    gap: 2rem;
+  }
+
+  .footer__links {
+    flex-direction: column;
+  }
 }

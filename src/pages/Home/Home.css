@@ -1,0 +1,219 @@
+main {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* HERO */
+
+.hero {
+  position: relative;
+
+  height: 100vh;
+
+  background: no-repeat url("../images/hero-image.png");
+  background-size: cover;
+  background-position: center;
+
+  margin-bottom: 50px;
+}
+
+.hero__heading {
+  position: absolute;
+  left: 5%;
+  bottom: 15%;
+
+  font-size: 2rem;
+  font-weight: 500;
+  color: white;
+}
+
+.hero__button {
+  position: absolute;
+  left: 5%;
+  bottom: 5%;
+
+  padding: 0.5rem 1rem;
+
+  font-weight: 600;
+
+  background: white;
+  border: 1px solid transparent;
+
+  cursor: pointer;
+}
+
+/* COLLECTION */
+
+.collection {
+  padding: 0 2rem;
+  margin-bottom: 50px;
+
+  p {
+    padding-left: 1rem;
+    margin-bottom: 50px;
+
+    font-size: 1.125rem;
+  }
+}
+
+.collection__image-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+
+  img {
+    width: 100%;
+  }
+}
+
+/* PRODUCTS */
+
+.products {
+  padding: 0 2rem;
+  margin-bottom: 50px;
+
+  h2 {
+    padding-left: 1rem;
+    margin-bottom: 50px;
+
+    font-size: 1.125rem;
+    font-weight: 500;
+  }
+}
+
+.products__container {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+
+  margin-bottom: 50px;
+}
+
+.products__image-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+/* CHOICES */
+
+.choices {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  padding: 5rem;
+  padding-bottom: 10rem;
+  margin-bottom: 50px;
+
+  text-align: center;
+
+  background-color: #f5f4f4;
+}
+
+.choices__heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.choices__text {
+  width: 60%;
+}
+
+/* INSTAGRAM SHOP */
+
+.instagram-shop {
+  padding: 0 2rem;
+  margin-bottom: 50px;
+
+  h3 {
+    margin: 0 auto 50px;
+    text-align: center;
+  }
+}
+
+.shop__image-container {
+  width: fit-content;
+
+  display: flex;
+  gap: 1rem;
+
+  margin: 0 auto;
+}
+
+.image-container {
+  position: relative;
+}
+
+.instagram__image {
+  min-width: 150px;
+}
+
+.instagram-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+
+  font-size: 2rem;
+  color: white;
+}
+
+.image-container.hovered > img {
+  filter: brightness(50%);
+  cursor: pointer;
+}
+
+.image-container.hovered > .instagram-logo {
+  opacity: 1;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 600px) {
+  .hero__button {
+    font-size: 1.125rem;
+    font-weight: 500;
+  }
+
+  /* Collection */
+
+  .collection__image-container {
+    grid-template-columns: 1fr;
+  }
+
+  /* Products */
+
+  .products__container {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+
+    padding-bottom: 1rem;
+  }
+
+  .products__image-container {
+    grid-template-columns: 1fr;
+  }
+
+  /* Choices */
+
+  .choices__text {
+    width: 100%;
+  }
+
+  /* Instagram Shop */
+
+  .instagram-shop {
+    padding: 0 0 1rem;
+    overflow-x: scroll;
+  }
+
+  .shop__image-container {
+    align-content: space-around;
+    gap: 0;
+  }
+}

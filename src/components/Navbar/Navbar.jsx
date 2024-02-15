@@ -1,5 +1,5 @@
-import { NavLink } from "react-router-dom";
-import { SlMagnifier, SlHeart, SlBag } from "react-icons/sl";
+import { Link } from "react-router-dom";
+import { SlMagnifier, SlHeart, SlBag, SlMenu } from "react-icons/sl";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -9,16 +9,16 @@ const Navbar = () => {
 
       <ul className="nav__links">
         <li>
-          <NavLink to="/">Shop</NavLink>
+          <Link to="/">Shop</Link>
         </li>
         <li>
-          <NavLink to="/arrivals">New Arrivals</NavLink>
+          <Link to="/arrivals">New Arrivals</Link>
         </li>
         <li>
-          <NavLink to="/sales">Sales</NavLink>
+          <Link to="/sales">Sales</Link>
         </li>
         <li>
-          <NavLink to="/journals">Journal</NavLink>
+          <Link to="/journals">Journal</Link>
         </li>
       </ul>
 
@@ -32,6 +32,10 @@ const Navbar = () => {
           <SlBag />
           <p>0</p>
         </span>
+      </div>
+
+      <div className="nav__menu">
+        <SlMenu />
       </div>
     </nav>
   );

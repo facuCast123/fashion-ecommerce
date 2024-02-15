@@ -38,3 +38,42 @@
     gap: 1rem;
   }
 }
+
+.nav__menu {
+  display: none;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 690px) {
+  .nav {
+    padding: 0.5rem 1rem;
+  }
+
+  .nav__links {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav {
+    justify-content: space-between;
+  }
+
+  .nav__logo {
+    order: 2;
+  }
+
+  .nav__links {
+    display: none;
+  }
+
+  .nav__actions {
+    order: 3;
+  }
+
+  .nav__menu {
+    display: block;
+    order: 1;
+  }
+}

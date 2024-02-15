@@ -42,7 +42,8 @@ const Footer = () => {
           placeholder="Enter your email address"
         />
         <span className="newsletter__tos">
-          By signing up, you agree to our Privacy Policy and Terms of Service.
+          By signing up, you agree to our <a href="#">Privacy Policy</a> and{" "}
+          <a href="">Terms of Service</a>.
         </span>
         <button className="newsletter__button">Subscribe</button>
       </div>
