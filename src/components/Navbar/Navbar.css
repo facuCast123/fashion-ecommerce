@@ -23,8 +23,7 @@
 
   margin-right: auto;
 
-  li,
-  li > a {
+  li {
     text-decoration: none;
     color: black;
 
@@ -32,8 +31,7 @@
   }
 }
 
-.nav__links > li:hover,
-.nav__links > li > a:hover {
+.nav__links > li:hover {
   text-decoration: underline;
 }
 
@@ -45,7 +43,9 @@
   span {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
+
+    cursor: pointer;
   }
 }
 
@@ -55,7 +55,9 @@
 
 /* Dropdown */
 
-.shop__dropdown {
+.dropdown {
+  display: none;
+
   position: absolute;
   left: 0;
   bottom: -480px;
@@ -67,10 +69,16 @@
   background-color: white;
 }
 
-.dropdown__content {
-  display: flex;
+.dropdown__shop,
+.dropdown__bestsellers {
+  display: none;
   justify-content: space-around;
   gap: 3rem;
+}
+
+.dropdown__arrivals {
+  display: none;
+  justify-content: space-around;
 }
 
 .dropdown__links {
@@ -99,9 +107,76 @@
 .dropdown__image {
   width: 400px;
   height: 450px;
+}
 
+.dropdown__image-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr, 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 0 2rem;
+
+  img {
+    width: 180px;
+    height: 200px;
+
+    cursor: pointer;
+
+    transform: scale(1);
+    transition: transform 0.3s;
+  }
+
+  img:hover {
+    transform: scale(1.2);
+  }
+}
+
+.dropdown__image.shop-image {
   background: no-repeat url("../images/dropdown-image.jpg");
   background-size: cover;
+}
+
+.dropdown__image.arrivals-image {
+  background: no-repeat url("../images/arrivals-image.jpg");
+  background-size: cover;
+}
+
+.dropdown__image.bestsellers-image {
+  background: no-repeat url("../images/bestsellers-image.png");
+  background-size: cover;
+}
+
+/* Search bar */
+
+.nav__search {
+  display: none;
+  width: 100%;
+
+  position: absolute;
+  left: 0;
+  bottom: -60px;
+
+  padding: 1rem;
+
+  background-color: white;
+}
+
+.nav__search__container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  input {
+    flex: 2;
+    padding: 0.5rem;
+
+    border: 1px solid transparent;
+  }
+
+  span {
+    cursor: pointer;
+  }
 }
 
 /* MEDIA QUERIES */
